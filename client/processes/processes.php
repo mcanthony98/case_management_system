@@ -29,7 +29,7 @@ if(isset($_POST['register'])){
 
     if($counter != 0){
         $_SESSION['error'] = $sms;
-        header ("Location: ../index.php");
+        header ("Location: ../register.php");
     }else{
         $encpass = md5($pass);
         $qry = "INSERT INTO client (firstname, lastname, email, phone, password, date_created) VALUES ('$fname', '$lname', '$email', '$phone', '$encpass', '$date')";
